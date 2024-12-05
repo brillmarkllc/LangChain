@@ -18,7 +18,7 @@ const llmChain = promptTemplate.pipe(model).pipe(parser);
 (async () => {
   const response = await llmChain.invoke({
     language: "Bengali",
-    text: "Hello, how are you?",
+    text: "What does brain rot mean?",
   });
   console.log(response);
 })();
