@@ -3,7 +3,7 @@ LangChain pipeline for demo purposes
 
 ## LangChain Python
 
-LangChain pipeline implementation in Python in [`langchain-py`](https://github.com/brillmarkllc/LangChain/tree/langchain-py) branch. Clone and install dependencies:
+LangChain pipeline implementation with Python in [`langchain-py`](https://github.com/brillmarkllc/LangChain/tree/langchain-py) branch. Clone and install dependencies:
 
 ```bash
 pip install -r requirements.txt
