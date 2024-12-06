@@ -16,12 +16,9 @@ const parser = new StringOutputParser();
 const llmChain = promptTemplate.pipe(model).pipe(parser);
 
 (async () => {
-  const stream = await llmChain.stream({
+  const response = await llmChain.invoke({
     context: "AI chatbot",
     text: "What does brain rot mean?",
   });
-  for await (const chunk of stream) {
-    process.stdout.write(chunk);
-  }
-  console.log();
+  console.log(response);
 })();
