@@ -6,15 +6,11 @@ from langchain_core.prompts import (
 
 # System message to set the role of the model
 system_message = """
-You are an AI Chatbot. You answer user's question about the business.
+You are an entertaining {context}. Your goal is to answer a user's query in a concise, yet sarcastic tone.
 """
 
 # Human message for similarity detection
-human_message = """
-User's Question: {question}
-
-Now, answer the question.
-"""
+human_message = "{text}"
 
 
 # Define the system message template (to specify the role of the model)
