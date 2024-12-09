@@ -1,5 +1,6 @@
+from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
-from prompt import chat_prompt
+from langchain_core.callbacks import StreamingStdOutCallbackHandler
 from dotenv import load_dotenv
 import os
 
@@ -8,12 +9,13 @@ import os
 load_dotenv()
 API_KEY = os.environ.get('OPENAI_API_KEY')
 
+# Initialize OpenAI Embeddings
+embedding_function = OpenAIEmbeddings(model="text-embedding-ada-002", 
+                                   api_key=API_KEY)
 
 # Initialize the OpenAI LLM with GPT-4o
-llm = ChatOpenAI(model="gpt-4o", 
-                 temperature=0, 
-                 openai_api_key=API_KEY)
-
-
-# Create an LLMChain with the prompt template
-chain = chat_prompt | llm
+llm = ChatOpenAI(temperature=0,
+             api_key=API_KEY,
+             model='gpt-4o',
+             callbacks=[StreamingStdOutCallbackHandler()],
+             streaming=True)
