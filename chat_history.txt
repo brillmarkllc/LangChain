@@ -164,3 +164,21 @@ Query: Tell me about cro.
 Response: At Brillmark, Conversion Rate Optimization (CRO) is about enhancing your website's effectiveness to turn more visitors into customers. We support marketers by providing strategic ideation, detailed evaluation reports, in-depth competitive analysis, comprehensive research, and effective optimization strategies. Our tailored CRO services ensure that your business objectives are met with measurable results, focusing on KPIs that matter to your success. Let's optimize your conversion rates with Brillmark's expertise.
 Sources: 
 
+Query: Tell me about cro.
+Response: Conversion Rate Optimization (CRO) is a key service offered by Brillmark. We specialize in enhancing your website's performance to increase the percentage of visitors who take desired actions, such as making a purchase or signing up for a newsletter. Our expertise in A/B testing and e-commerce optimization ensures that your site is not only visually appealing but also highly effective in converting visitors into customers. By focusing on data-driven strategies and user experience improvements, Brillmark helps you achieve higher conversion rates and maximize your online revenue.
+Sources: 
+
+Query: What are the services provided by BrillMark?
+Response: Brillmark offers a range of services focused on enhancing your online presence and performance. Our key services include:
+
+1. **A/B Testing**: We provide comprehensive A/B testing services to help you determine the most effective design and content variations for your website, ensuring optimal user engagement and conversion rates.
+
+2. **Full-Stack Development**: Our team delivers end-to-end development solutions, from front-end design to back-end functionality, tailored to meet your specific business needs.
+
+3. **Conversion Rate Optimization (CRO)**: We specialize in optimizing your website to increase the percentage of visitors who complete desired actions, using data-driven strategies to boost your conversion rates.
+
+4. **E-commerce Optimization**: Brillmark enhances your e-commerce platform to improve user experience and increase sales, focusing on both technical and strategic improvements.
+
+These services are designed to help businesses achieve their online goals by leveraging Brillmark's expertise in testing, development, and optimization.
+Sources: https://www.brillmark.com/services/
+

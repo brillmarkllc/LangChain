@@ -1,4 +1,5 @@
-from langchain_chroma import Chroma
+import pinecone
+from langchain_pinecone import PineconeVectorStore
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.history_aware_retriever import create_history_aware_retriever
@@ -6,16 +7,23 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain.chains.retrieval import create_retrieval_chain
 from constants.keyword import render_buttons
 from constants.prompt import SYSTEM_MESSAGE
-from config import llm, embedding_function
+from config import (
+    llm, 
+    pc_index,
+    embedding_function
+)
 from save_data import save_to_file
 # from langsmith import Client, traceable
 
 # client = Client()
 
 # @traceable
-def create_chain(db_dir="chroma_db"):
-    vectorStore = Chroma(persist_directory=db_dir, 
-                         embedding_function=embedding_function)
+def create_chain():
+    # Create Pinecone vector store
+    vectorStore = PineconeVectorStore(
+        index=pc_index,
+        embedding=embedding_function
+    )
     
     prompt = ChatPromptTemplate.from_messages([
         ("system", SYSTEM_MESSAGE),
