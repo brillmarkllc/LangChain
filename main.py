@@ -13,11 +13,11 @@ from config import (
     embedding_function
 )
 from save_data import save_to_file
-# from langsmith import Client, traceable
+from langsmith import Client, traceable
 
-# client = Client()
+client = Client()
 
-# @traceable
+@traceable
 def create_chain():
     # Create Pinecone vector store
     vectorStore = PineconeVectorStore(
@@ -58,7 +58,7 @@ def create_chain():
     return retrieval_chain
 
 
-# @traceable
+@traceable
 def process_chat(chain, question, chat_history):
     response = chain.invoke({
         "chat_history": chat_history,
